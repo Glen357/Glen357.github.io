@@ -51,19 +51,19 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-app.post('/upload', (req, res) => {
-  const imagePath = path.join(__dirname, 'Backend/Images/2024-06-29.png');
-  const imageBuffer = fs.readFileSync(imagePath);
+// app.post('/upload', (req, res) => {
+//   const imagePath = path.join(__dirname, 'Backend/Images/2024-06-29.png');
+//   const imageBuffer = fs.readFileSync(imagePath);
 
-  const sql = 'INSERT INTO images (name, image) VALUES (?, ?)';
-  const values = ['image_name', imageBuffer];
+//   const sql = 'INSERT INTO images (name, image) VALUES (?, ?)';
+//   const values = ['image_name', imageBuffer];
 
-  db.query(sql, values, (err, result) => {
-    if (err) {
-      console.error('Failed to insert image:', err);
-      res.status(500).send('Failed to insert image');
-    } else {
-      res.send('Image inserted successfully');
-    }
-  });
-});
+//   db.query(sql, values, (err, result) => {
+//     if (err) {
+//       console.error('Failed to insert image:', err);
+//       res.status(500).send('Failed to insert image');
+//     } else {
+//       res.send('Image inserted successfully');
+//     }
+//   });
+// });
