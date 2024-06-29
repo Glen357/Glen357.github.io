@@ -1,0 +1,49 @@
+.NavContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 10vh;
+    align-items: center;
+
+}
+.NavContainer {
+    grid-area: 1 / 1 / 2 / 2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight:inherit;
+}
+@keyframes Icon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .Icon {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+
+.Home {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.Page_Options {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.Portfolio {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.Contact {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.NavContainer img {
+    height: 50px;
+}

@@ -1,10 +1,71 @@
+@media (min-width: 530px) {
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  border: blue;
+  border-style: double;
+  width: 97.7vw;
   text-align: center;
 }
 
+/* .shadow {
+  width: 90%;
+  height: 45vh;
+  background-color: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+} */
+.ContentContainer {
+
+  display: grid;
+  padding-top: 5%;
+  padding-left: 5%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+    .contentComponent1,
+    .contentComponent2,
+    .contentComponent3,
+    .contentComponent4 {
+      background-image: url('/2024-06-29 (6).png');
+      background-repeat: no-repeat;
+      display: grid;
+      padding-left: 0%;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      place-content: center;
+      margin-bottom: 10%;
+      width: 57vw;
+      height: 50vh;
+    }
+  
+    .contentComponent1Image,
+    .contentComponent2Image,
+    .contentComponent3Image,
+    .contentComponent4Image {
+      max-width: 100%;
+      margin-left: 1%;
+    }
+  
+    .contentComponent1Info,
+    .contentComponent2Info,
+    .contentComponent3Info,
+    .contentComponent4Info {
+      max-width: 90%;
+      margin: auto;
+      white-space: normal;
+      word-wrap: break-word;
+      margin-top: 5%;
+      margin-left: 5%;
+      align-items: center;
+    }
+  
+  } 
+
+/* I have left these stylings here as I would like to integrate the logo spin and drop shadow in my site.
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +100,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
