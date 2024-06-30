@@ -3,6 +3,9 @@ import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import "./Contact.css";
 
+// This page is not loading correctly. I think I will try to use this page 
+// to start using my Database
+
 const Contact = () => {
   return (
     <>
