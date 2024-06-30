@@ -1,19 +1,19 @@
-
+@media (min-width: 340px){
 .header {
     background-image: url('/image-1720x300.jpg'); /* Adjust the path as needed */
     background-size: cover; /* Ensures the image covers the entire header */
-    background-position: center; /* Centers the image */
+    background-position: cover; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 30vh; /* Adjust the height as needed */
-    width: 95.7vw; /* Ensures the header takes the full width */
+    height: 30vh; 
+    width: 98.5%; 
     margin-top: 2%;
     padding-left: 2%;
-    color: white; /*Example text color */
-    display: flex; /* Example to center content */
-    align-items: center; /* Example to center content vertically */
-    justify-content: center; /* Example to center content horizontally */
-  
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
   }
+
   .header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -39,7 +39,7 @@
     .Icon.react:hover {
       filter: drop-shadow(0 0 2em #61dafbaa);
     }
-    
+  }
     @keyframes spin {
       from {
         transform: rotate(0deg);
@@ -51,7 +51,17 @@
     
     @media (prefers-reduced-motion: no-preference) {
       a:nth-of-type(2) .Icon {
-        animation: spin infinite 20s linear;
+        animation: spin infinite 10s linear;
       }
     }
     .NavContainer { grid-area: 1 / 2 / 2 / 4; }
+  
+    @media (max-width: 980px) {
+      .Icon  {
+        display: none;
+      }
+
+    
+  
+    
+  }

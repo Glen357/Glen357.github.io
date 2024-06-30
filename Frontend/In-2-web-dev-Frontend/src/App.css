@@ -1,44 +1,42 @@
 @media (min-width: 530px) {
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
-  border: blue;
-  border-style: double;
-  width: 97.7vw;
+  width: 99%;
   text-align: center;
 }
 
-/* .shadow {
-  width: 90%;
+.shadow {
+  width: 50%;
   height: 45vh;
   background-color: none;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   padding: 20px;
-} */
+}
 .ContentContainer {
-
+  text-align: left;
   display: grid;
   padding-top: 5%;
-  padding-left: 5%;
+  padding-left: 12%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   }
+
+
     .contentComponent1,
     .contentComponent2,
     .contentComponent3,
     .contentComponent4 {
-      background-image: url('/2024-06-29 (6).png');
+      /* background-image: url('/2024-06-29 (6).png');
       background-repeat: no-repeat;
+      background-position: cover; */
       display: grid;
-      padding-left: 0%;
+      padding-left: 10%;
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
       place-content: center;
       margin-bottom: 10%;
-      width: 57vw;
+      width: 98%;
       height: 50vh;
     }
   
@@ -47,8 +45,11 @@
     .contentComponent3Image,
     .contentComponent4Image {
       max-width: 100%;
-      margin-left: 1%;
+      margin: auto;
+      align-items: center;
     }
+
+
   
     .contentComponent1Info,
     .contentComponent2Info,

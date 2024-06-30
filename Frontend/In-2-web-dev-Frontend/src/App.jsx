@@ -11,8 +11,9 @@ import Header from "./Components/Header";
 import Page_Options from "./Pages/Page_Options/Page_Options";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Contact from "./Pages/Contact/Contact";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer"
 // import Tour1 from "./Pages/Tours/Tour1";
+
 import "./App.css";
 
 
@@ -48,29 +49,25 @@ const Home = () => {
           <Header />
         </div>
       <div className="ContentContainer">
-        
         <div className="contentComponent1">
           <div className="shadow">
-            <h3>About In2WebDev</h3>
             <div className="contentComponent1Image">
-              <img src="image" alt="" />
+            <Link to="../src/Pages/Info page/Info_page.jsx"><img src="image-400x100.jpg" alt="" /></Link>
             </div>
             <div className="contentComponent1Info">
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
+               <h3>About In2WebDev</h3>
+              <p>In2WebDev is a site I created to advertise Website build and maintenance services, and to but also as a form of portfolio to display my work and abilities as a Web-developer.  </p> <br />
+              <p>Please use the contact form on the last page to request builds and services, or if you have any job opportunities to discuss. </p> <br /> <p> Click on the image above to find further information about In2Web dev and its owner</p>
             </div>
           </div>
         </div>
 
         <div className="contentComponent2">
           <div className="shadow">
-            <h3>Title</h3>
-           
             <div className="contentComponent2Image">
-            <Link to="../src/Pages/Page_Options"><img src="Image" alt="" /></Link>
+            <Link to="../src/Pages/Page_Options"><img src="image-400x100.jpg" alt="" /></Link>
               <div className="contentComponent2Info"> </div>
+               <h3>Page Build Options</h3>
               <p></p>
             </div>
           </div>
@@ -78,11 +75,12 @@ const Home = () => {
 
         <div className="contentComponent3">
           <div className="shadow">
-            <h3>Title</h3>
+          
             <div className="contentComponent3Image">
-            <Link to="/Portfolio"><img src="Image" alt="" /></Link>
+            <Link to="/Portfolio"><img src="image-400x100.jpg" alt="" /></Link>
             </div>
             <div className="contentComponent3Info">
+                <h3>Portfolio</h3>
               <p></p>
               <p></p>
             </div>
@@ -91,10 +89,11 @@ const Home = () => {
 
         <div className="contentComponent4">
           <div className="shadow">
-            <h3>Title</h3>
+            
             <div className="contentComponent4Image">
-            <Link to="/Contact"><img src="Image" alt="" /></Link>
+            <Link to="./Pages/Contact/Contact.jsx"><img src="image-400x100.jpg" alt="" /></Link>
               <div className="contentComponent4Info">
+                <h3>Contact</h3>
                 <p></p>
               </div>
             </div>

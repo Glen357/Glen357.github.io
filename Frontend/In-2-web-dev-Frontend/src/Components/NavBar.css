@@ -1,3 +1,4 @@
+@media (min-width: 530px){
 .NavContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -46,4 +47,5 @@
 
 .NavContainer img {
     height: 50px;
+}
 }
