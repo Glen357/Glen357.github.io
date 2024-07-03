@@ -3,6 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mysql2 = require('mysql2');
 
+
 const fs = require('fs');
 const path = require('path');
 
@@ -22,6 +23,18 @@ app.get('/', (req, res) => {
   res.send('It fu#n worked!');
 });
 // Define your API routes here
+
+// Endpoint to fetch content by ID
+app.get('/content/:id', (req, res) => {
+  const contentId = req.params.id;
+  const query = 'SELECT * FROM information_page WHERE Info_ID = 1';
+
+  connection.query(query, [contentId], (err, result) => {
+    if (err) throw err;
+    res.json(result[0]);
+  });
+});
+
 
 // MySQL Database Connection
 const db = mysql2.createConnection({
@@ -50,6 +63,26 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // app.post('/upload', (req, res) => {
 //   const imagePath = path.join(__dirname, 'Backend/Images/2024-06-29.png');
