@@ -1,33 +1,32 @@
-import Header from "../../Components/Header";
-import NavBar from "../../Components/NavBar";
-import Footer from "../../Components/Footer";
-import "./Contact.css";
+// Info_page.jsx
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import DOMPurify from "dompurify";
 
-// This page is not loading correctly. I think I will try to use this page 
-// to start using my Database
+const Info_page = () => {
+  const { id } = useParams();
+  const [content, setContent] = useState("");
 
-const Contact = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/api/content/${id}`);
+        const data = await response.json();
+        setContent(data.htmlContent);
+      } catch (error) {
+        console.error("Error fetching content:", error);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
   return (
-    <>
-      <div className="pageContainer ">
-        <div className="HeaderContainer">
-          <div className="NavBar">
-            <NavBar />
-          </div>
-
-          <Header />
-        </div>
-      <div>
-        <h1>Information about In2WebDev and its developer</h1>
-        <p>Many informations </p>
-      </div>
-      </div>
-
-      <div className="FooterSpace">
-        <Footer />
-      </div>
-    </>
+    <div>
+      <h1>Information Page</h1>
+      <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }} />
+    </div>
   );
 };
 
-export default Contact;
+export default Info_page;

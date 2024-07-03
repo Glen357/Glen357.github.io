@@ -4,7 +4,7 @@
     background-size: cover; /* Ensures the image covers the entire header */
     background-position: cover; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 30vh; 
+    /* height: 30vh;  */
     width: 98.5%; 
     margin-top: 2%;
     padding-left: 2%;
@@ -12,6 +12,11 @@
     display: flex; 
     align-items: center; 
     justify-content: center; 
+  }
+
+  .Header img { /*this makes the image responsive*/
+    max-width: 100%;
+    height: auto;
   }
 
   .header {
@@ -26,6 +31,7 @@
 
     .Icon img {
       border-radius: 60%;
+      height: auto;
     }
     .logo {
       height: 6em;
@@ -33,6 +39,7 @@
       will-change: filter;
       transition: filter 300ms;
     }
+
     .Icon:hover {
       filter: drop-shadow(0 0 2em #646cffaa);
     }
