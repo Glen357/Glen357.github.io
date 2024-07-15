@@ -2,6 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mysql2 = require('mysql2');
+const cors = require('cors');
 
 
 const fs = require('fs');
@@ -15,6 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(cors());
 app.use(express.json()); // Parse JSON bodies
 // Add any other middleware here as needed
 
@@ -27,7 +29,7 @@ app.get('/', (req, res) => {
 // Endpoint to fetch content by ID
 app.get('/content/:id', (req, res) => {
   const contentId = req.params.id;
-  const query = 'SELECT * FROM information_page WHERE Info_ID = 1';
+  const query = 'SELECT Info_page FROM information_page WHERE Info_ID = 1';
 
   connection.query(query, [contentId], (err, result) => {
     if (err) throw err;
